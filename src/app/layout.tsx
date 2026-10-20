@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getDefaultConsentScript } from "@/lib/consent";
+import { headers } from "next/headers";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/400-italic.css";
 import "@fontsource/inter/600.css";
@@ -77,13 +78,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const requestHeaders = await headers();
+  const locale = requestHeaders.get("x-bizdays-locale") === "es" ? "es" : "en";
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         {/* Google Consent Mode v2 — MUST be first, before any Google tags */}
         <script

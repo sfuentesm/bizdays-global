@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-06-08",
     updatedAt: "2026-06-08",
     readingTime: { en: "8 min read", es: "8 min de lectura" },
-    author: "BizDays Global",
+    author: "Sergio Fuentes",
     keywords: [
       "business days calculator",
       "calculadora de días laborables",
@@ -135,7 +135,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-04-13",
     updatedAt: "2026-04-13",
     readingTime: { en: "9 min read", es: "9 min de lectura" },
-    author: "BizDays Global",
+    author: "Sergio Fuentes",
     keywords: [
       "business days excel",
       "business days google sheets",
@@ -386,7 +386,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-04-13",
     updatedAt: "2026-04-13",
     readingTime: { en: "7 min read", es: "7 min de lectura" },
-    author: "BizDays Global",
+    author: "Sergio Fuentes",
     keywords: [
       "net 30 business days",
       "net terms",
@@ -487,7 +487,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-04-13",
     updatedAt: "2026-04-13",
     readingTime: { en: "8 min read", es: "8 min de lectura" },
-    author: "BizDays Global",
+    author: "Sergio Fuentes",
     keywords: [
       "delivery date business days",
       "shipping lead time",
@@ -589,7 +589,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-07-15",
     updatedAt: "2025-07-15",
     readingTime: { en: "8 min read", es: "8 min de lectura" },
-    author: "BizDays Global",
+    author: "Sergio Fuentes",
     keywords: [
       "calculate business days",
       "business days between two dates",
@@ -804,7 +804,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-07-15",
     updatedAt: "2025-07-15",
     readingTime: { en: "10 min read", es: "10 min de lectura" },
-    author: "BizDays Global",
+    author: "Sergio Fuentes",
     keywords: [
       "public holidays 2025",
       "international holidays",

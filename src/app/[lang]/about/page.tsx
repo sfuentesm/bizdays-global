@@ -5,6 +5,7 @@ import { ArrowRight, CalendarDays, Globe, ShieldCheck, Sparkles } from "lucide-r
 
 import { isValidLocale } from "@/lib/i18n";
 import type { Locale } from "@/types";
+import { EditorialTrust } from "@/components/content/editorial-trust";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.bizdaysglobal.com";
@@ -101,6 +102,11 @@ export default async function AboutPage({ params }: PageProps) {
           <p className="mt-5 max-w-3xl text-lg leading-8 text-primary-100/80">
             {intro}
           </p>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-primary-100/70">
+            {locale === "es"
+              ? "Desarrollado y mantenido por Sergio Fuentes, ingeniero de software titulado con experiencia profesional en desarrollo de aplicaciones."
+              : "Developed and maintained by Sergio Fuentes, a qualified software engineer with professional experience building applications."}
+          </p>
         </div>
       </section>
 
@@ -153,6 +159,10 @@ export default async function AboutPage({ params }: PageProps) {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+          </div>
+
+          <div className="mt-8">
+            <EditorialTrust locale={locale} />
           </div>
         </div>
       </section>

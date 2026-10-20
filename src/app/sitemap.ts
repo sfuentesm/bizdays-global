@@ -65,7 +65,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog articles
-  const postSlugs = getAllPostSlugs();
+  const postSlugs = getAllPostSlugs().filter(
+    (slug) => slug !== "public-holidays-2025-complete-guide-international-teams"
+  );
   for (const locale of LOCALES) {
     for (const slug of postSlugs) {
       entries.push({

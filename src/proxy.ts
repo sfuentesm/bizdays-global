@@ -11,6 +11,7 @@ const COMING_SOON_MODE = false;
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const requestHeaders = new Headers(request.headers);
 
   // Skip static files, API routes, and metadata files
   if (
@@ -33,7 +34,12 @@ export function proxy(request: NextRequest) {
   );
 
   if (pathnameHasLocale) {
-    return NextResponse.next();
+    const locale = locales.find(
+      (candidate) =>
+        pathname === `/${candidate}` || pathname.startsWith(`/${candidate}/`)
+    );
+    if (locale) requestHeaders.set("x-bizdays-locale", locale);
+    return NextResponse.next({ request: { headers: requestHeaders } });
   }
 
   // Detect locale from Accept-Language header

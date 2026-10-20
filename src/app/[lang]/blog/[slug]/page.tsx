@@ -44,7 +44,16 @@ export async function generateMetadata({
     title: post.title[locale],
     description: post.description[locale],
     keywords: post.keywords,
-    authors: [{ name: post.author }],
+    authors: [{ name: post.author, url: `${SITE_URL}/${locale}/about` }],
+    ...(post.slug === "public-holidays-2025-complete-guide-international-teams"
+      ? {
+          robots: {
+            index: false,
+            follow: true,
+            googleBot: { index: false, follow: true },
+          },
+        }
+      : {}),
     openGraph: {
       type: "article",
       title: post.title[locale],
@@ -85,7 +94,12 @@ export default async function BlogArticlePage({
     description: post.description[locale],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
-    author: { "@type": "Organization", name: post.author },
+    author: {
+      "@type": "Person",
+      name: "Sergio Fuentes",
+      jobTitle: "Software Engineer",
+      url: `${SITE_URL}/${locale}/about`,
+    },
     publisher: {
       "@type": "Organization",
       name: "BizDays Global",

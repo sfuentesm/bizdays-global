@@ -34,8 +34,8 @@ export function generateBaseMetadata(locale: Locale): Metadata {
       "calculadora días laborables",
       "días hábiles",
     ],
-    authors: [{ name: "BizDays Global" }],
-    creator: "BizDays Global",
+    authors: [{ name: "Sergio Fuentes", url: `${SITE_URL}/${locale}/about` }],
+    creator: "Sergio Fuentes",
     metadataBase: new URL(SITE_URL),
     openGraph: {
       type: "website",
