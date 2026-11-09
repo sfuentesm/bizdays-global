@@ -47,8 +47,8 @@ export function OfficialSources({
                 {isSpanish ? "Revisión:" : "Review:"}
               </span>{" "}
               {isSpanish
-                ? `Sergio Fuentes revisó esta referencia el ${source.reviewedAt}. ${source.reviewNote}`
-                : `Sergio Fuentes reviewed this reference on ${source.reviewedAt}. ${source.reviewNote}`}
+                ? `Las fuentes fueron revisadas por el autor el ${source.reviewedAt}. ${source.reviewNote}`
+                : `The sources were reviewed by the author on ${source.reviewedAt}. ${source.reviewNote}`}
             </p>
           </div>
         ))}
