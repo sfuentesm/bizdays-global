@@ -21,6 +21,7 @@ import { CalculatorForm } from "@/components/calculator/calculator-form";
 import type { Locale } from "@/types";
 import { EditorialTrust } from "@/components/content/editorial-trust";
 import { CountryPlanningGuide } from "@/components/content/country-planning-guide";
+import { OfficialSources } from "@/components/content/official-sources";
 
 interface CountryPageProps {
   params: Promise<{ lang: string; country: string }>;
@@ -283,6 +284,8 @@ export default async function CountryCalculatorPage({
       </section>
 
       <EditorialTrust locale={locale} />
+
+      <OfficialSources countryCode={countryData.code} locale={locale} />
 
       {/* FAQ */}
       <section className="bg-white rounded-xl border border-grey-200 p-6">
