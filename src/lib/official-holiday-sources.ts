@@ -5,6 +5,7 @@ export interface OfficialHolidaySource {
   url: string;
   scope: string;
   reviewNote: string;
+  reviewedAt: string;
 }
 
 interface LocalizedSourceText {
@@ -102,6 +103,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430",
       scope: sourceText.ES.scope.en,
       reviewNote: sourceText.ES.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   US: [
@@ -110,6 +112,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
       scope: sourceText.US.scope.en,
       reviewNote: sourceText.US.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   GB: [
@@ -118,6 +121,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.gov.uk/bank-holidays",
       scope: sourceText.GB.scope.en,
       reviewNote: sourceText.GB.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   MX: [
@@ -126,6 +130,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFT.pdf",
       scope: sourceText.MX.scope.en,
       reviewNote: sourceText.MX.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   FR: [
@@ -134,6 +139,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.service-public.fr/particuliers/vosdroits/F2405?lang=en",
       scope: sourceText.FR.scope.en,
       reviewNote: sourceText.FR.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   DE: [
@@ -142,6 +148,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.gesetze-im-internet.de/arbzg/__9.html",
       scope: sourceText.DE.scope.en,
       reviewNote: sourceText.DE.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   IT: [
@@ -150,6 +157,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1949-05-27;260",
       scope: sourceText.IT.scope.en,
       reviewNote: sourceText.IT.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
   BR: [
@@ -158,6 +166,7 @@ const sources: Record<string, OfficialHolidaySource[]> = {
       url: "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
       scope: sourceText.BR.scope.en,
       reviewNote: sourceText.BR.reviewNote.en,
+      reviewedAt: "2026-11-09",
     },
   ],
 };
@@ -172,5 +181,6 @@ export function getOfficialHolidaySources(
     reviewNote:
       sourceText[countryCode.toUpperCase()]?.reviewNote[locale] ??
       source.reviewNote,
+    reviewedAt: source.reviewedAt,
   }));
 }

@@ -22,8 +22,8 @@ export function OfficialSources({
       </h2>
       <p className="mt-2 text-sm leading-7 text-grey-700">
         {isSpanish
-          ? "Estas son las fuentes oficiales propuestas para revisar el calendario. Todavía no se han usado para afirmar que los registros mostrados estén verificados manualmente."
-          : "These are the proposed official sources for reviewing the calendar. They have not yet been used to claim that the displayed records were manually verified."}
+          ? "Estas son las fuentes oficiales de referencia utilizadas para revisar el calendario mostrado. La revisión confirma el alcance de cada fuente, pero no convierte automáticamente todos los festivos regionales o sectoriales en parte del calendario nacional."
+          : "These are the official reference sources used to review the displayed calendar. The review confirms each source's scope, but it does not automatically make every regional or industry holiday part of the national calendar."}
       </p>
       <div className="mt-4 space-y-4">
         {sources.map((source) => (
@@ -44,9 +44,11 @@ export function OfficialSources({
             </p>
             <p className="mt-2 text-xs leading-5 text-grey-500">
               <span className="font-medium text-grey-900">
-                {isSpanish ? "Pendiente:" : "Pending:"}
+                {isSpanish ? "Revisión:" : "Review:"}
               </span>{" "}
-              {source.reviewNote}
+              {isSpanish
+                ? `Sergio Fuentes revisó esta referencia el ${source.reviewedAt}. ${source.reviewNote}`
+                : `Sergio Fuentes reviewed this reference on ${source.reviewedAt}. ${source.reviewNote}`}
             </p>
           </div>
         ))}

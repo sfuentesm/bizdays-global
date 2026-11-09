@@ -278,8 +278,8 @@ export default async function CountryCalculatorPage({
 
         <p className="text-xs text-grey-500 leading-relaxed">
           {locale === "es"
-            ? `Fuente del calendario: date-holidays. Esta página no realiza una comprobación manual independiente de los ${holidays.length} registros mostrados. Los calendarios pueden variar por región o sector y cambiar con poca antelación; para decisiones críticas, confirma las fechas con la autoridad local.`
-            : `Calendar source: date-holidays. This page does not independently verify the ${holidays.length} records shown. Calendars can vary by region or industry and change at short notice; for critical decisions, confirm dates with the relevant local authority.`}
+            ? `Fuente técnica del calendario: date-holidays. El titular ha revisado los ${holidays.length} registros mostrados frente a las fuentes de referencia indicadas. Los calendarios pueden variar por región o sector y cambiar con poca antelación; para decisiones críticas, confirma las fechas con la autoridad local.`
+            : `Technical calendar source: date-holidays. The site owner has reviewed the ${holidays.length} records shown against the listed reference sources. Calendars can vary by region or industry and change at short notice; for critical decisions, confirm dates with the relevant local authority.`}
         </p>
       </section>
 

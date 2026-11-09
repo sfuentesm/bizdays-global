@@ -20,8 +20,8 @@ export function EditorialTrust({ locale }: EditorialTrustProps) {
       </p>
       <p className="mt-3 text-sm leading-7 text-grey-700 sm:text-base">
         {isSpanish
-          ? "No hacemos una comprobación manual independiente de cada fecha. Los calendarios pueden omitir festivos regionales, sectoriales o cambios recientes; por eso el resultado es una ayuda de planificación y no sustituye a la autoridad local."
-          : "We do not independently verify every date manually. Calendars may omit regional or industry holidays, or miss recent changes, so the result is a planning aid and does not replace the relevant local authority."}
+          ? "El titular ha revisado los calendarios mostrados frente a las fuentes de referencia indicadas. Aun así, pueden existir festivos regionales, sectoriales o cambios recientes; por eso el resultado es una ayuda de planificación y no sustituye a la autoridad local."
+          : "The site owner has reviewed the displayed calendars against the listed reference sources. Regional or industry holidays and recent changes may still require separate checking, so the result is a planning aid and does not replace the relevant local authority."}
       </p>
       <div className="mt-5 flex flex-wrap gap-3 text-sm">
         <Link

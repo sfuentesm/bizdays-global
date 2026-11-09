@@ -11,9 +11,9 @@ export const locales: Locale[] = ["en", "es"];
 const dictionaries: Record<Locale, Dictionary> = {
   en: {
     meta: {
-      title: "BizDays Global — Business Days Calculator",
+      title: "Business Day Calculator — Working Days & Holidays",
       description:
-        "Calculate delivery dates excluding weekends and public holidays for 100+ countries. Free online business days calculator.",
+        "Calculate working days, delivery dates and public holidays for 170+ countries. Free calculator with forward and backward counting.",
       titleTemplate: "Business Days Calculator for {country} | BizDays Global",
       descriptionTemplate:
         "Calculate working days in {country} excluding weekends and {country} public holidays. Free online tool for delivery date planning.",
@@ -36,9 +36,9 @@ const dictionaries: Record<Locale, Dictionary> = {
         title: "Why teams choose BizDays Global",
         items: [
           {
-            title: "Accurate holiday data",
+            title: "Transparent holiday data",
             description:
-              "Official public holiday calendars sourced from government databases and updated annually for every country we support.",
+              "Public-holiday calendars provided through the open-source date-holidays project, with clear limitations and links to official sources for further checking.",
           },
           {
             title: "Instant calculations",
@@ -61,9 +61,9 @@ const dictionaries: Record<Locale, Dictionary> = {
               "Open the page, pick your country, and get your answer. No accounts, no subscriptions, no data collection.",
           },
           {
-            title: "SEO-friendly country pages",
+            title: "Country planning pages",
             description:
-              "Dedicated pages for every country with full holiday tables — perfect for bookmarking and sharing with colleagues.",
+              "Dedicated pages with a holiday table, a reproducible calculation example, source notes, and practical planning guidance.",
           },
         ],
       },
@@ -73,7 +73,7 @@ const dictionaries: Record<Locale, Dictionary> = {
           {
             title: "Select your country",
             description:
-              "Choose from 170+ countries. We load the official public holiday calendar for the current year.",
+              "Choose from 170+ countries. We load the public-holiday calendar available through date-holidays for the current year.",
           },
           {
             title: "Set your parameters",
@@ -451,11 +451,11 @@ const dictionaries: Record<Locale, Dictionary> = {
   },
   es: {
     meta: {
-      title: "BizDays Global — Calculadora de Días Laborables",
+      title: "Calculadora de días laborables — Festivos y fechas",
       description:
-        "Calcula fechas de entrega excluyendo fines de semana y festivos locales de más de 100 países. Calculadora gratuita de días hábiles.",
+        "Calcula días laborables, fechas de entrega y festivos en más de 170 países. Herramienta gratuita con conteo hacia delante y hacia atrás.",
       titleTemplate:
-        "Calculadora de Días Laborables en {country} | BizDays Global",
+        "Calculadora de días laborables en {country} | Festivos y fechas",
       descriptionTemplate:
         "Calcula días hábiles en {country} excluyendo fines de semana y festivos de {country}. Herramienta gratuita para planificar entregas.",
     },
@@ -477,9 +477,9 @@ const dictionaries: Record<Locale, Dictionary> = {
         title: "Por qué los equipos eligen BizDays Global",
         items: [
           {
-            title: "Datos de festivos precisos",
+            title: "Datos de festivos transparentes",
             description:
-              "Calendarios oficiales de festivos públicos obtenidos de bases de datos gubernamentales y actualizados anualmente para cada país.",
+              "Calendarios públicos proporcionados por el proyecto open source date-holidays, con enlaces a fuentes oficiales y limitaciones explicadas.",
           },
           {
             title: "Cálculos instantáneos",
@@ -502,9 +502,9 @@ const dictionaries: Record<Locale, Dictionary> = {
               "Abre la página, selecciona tu país y obtén tu respuesta. Sin cuentas, sin suscripciones, sin recopilación de datos.",
           },
           {
-            title: "Páginas por país optimizadas para SEO",
+            title: "Guías de planificación por país",
             description:
-              "Páginas dedicadas para cada país con tablas completas de festivos — perfectas para guardar en favoritos y compartir con colegas.",
+              "Páginas dedicadas con tabla de festivos, ejemplo reproducible, notas sobre las fuentes y orientación práctica.",
           },
         ],
       },
@@ -514,7 +514,7 @@ const dictionaries: Record<Locale, Dictionary> = {
           {
             title: "Selecciona tu país",
             description:
-              "Elige entre más de 170 países. Cargamos el calendario oficial de festivos públicos del año actual.",
+              "Elige entre más de 170 países. Cargamos el calendario público disponible en date-holidays para el año actual.",
           },
           {
             title: "Configura tus parámetros",
@@ -566,7 +566,7 @@ const dictionaries: Record<Locale, Dictionary> = {
           {
             question: "¿Cómo de precisos son los datos de festivos?",
             answer:
-              "Obtenemos los datos de festivos de la librería open-source date-holidays, que agrega calendarios de festivos publicados por gobiernos. Los datos se actualizan regularmente pero recomendamos verificar fechas críticas con las autoridades locales.",
+              "Obtenemos los datos de festivos de la librería open-source date-holidays. En cada página enlazamos fuentes oficiales de referencia y explicamos las limitaciones del calendario; recomendamos verificar fechas críticas con las autoridades locales.",
           },
           {
             question: "¿Puedo contar días laborables hacia atrás?",
